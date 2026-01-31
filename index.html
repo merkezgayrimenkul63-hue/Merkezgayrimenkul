@@ -1,69 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <title>Merkez Gayrimenkul | Avcılar</title>
 <style>
-body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;scroll-behavior:smooth;background:#f0f4f8}
-h2{margin-bottom:30px;text-align:center;color:#1f2a36}
-p{margin-bottom:15px;line-height:1.7}
-section{max-width:1100px;margin:auto;padding:70px 20px;position:relative;border-radius:12px}
+body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;scroll-behavior:smooth;background:#f5f6fa;color:#333;}
+h1,h2,h3{margin:0 0 15px 0}
+h2{text-align:center;color:#1a1a2e;font-weight:700;}
+p{line-height:1.7;margin-bottom:15px;}
 
-/* Menü */
-nav{background:#1f2a36;padding:15px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.3)}
-nav a{color:#fff;margin:0 15px;font-weight:bold}
-nav a:hover{color:#f1c40f}
+/* MENU */
+nav{background:#1a1a2e;padding:18px 20px;position:sticky;top:0;z-index:1000;display:flex;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.2);}
+nav a{color:#fff;margin:0 18px;font-weight:600;text-decoration:none;transition:.3s}
+nav a:hover{color:#f0b429}
 
-/* Hero */
-header{background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;height:550px;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
-header h1{font-size:3em;margin-bottom:15px;animation:fadeUp 1s ease-in-out}
-header p{font-size:1.3em;margin-bottom:20px;animation:fadeUp 1.3s ease-in-out}
+/* HERO */
+header{background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;height:600px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+header h1{font-size:3em;margin-bottom:15px;}
+header p{font-size:1.3em;margin-bottom:25px;}
+header a{background:#f0b429;color:#1a1a2e;padding:15px 25px;border-radius:50px;text-decoration:none;font-weight:bold;transition:.3s;}
+header a:hover{background:#d49e1e;color:#fff;transform:scale(1.05);}
 
 /* WhatsApp Sabit Buton */
 .whatsapp-fixed{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;padding:18px 28px;border-radius:50px;font-weight:bold;z-index:1000;box-shadow:0 4px 15px rgba(0,0,0,.3);transition:0.3s}
 .whatsapp-fixed:hover{background:#1ebe57;transform:scale(1.05)}
 
-/* Kutular ve Animasyon */
-.boxes{display:flex;gap:25px;flex-wrap:wrap;justify-content:center}
-.box{background:#fff;padding:30px;width:300px;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,.1);transition:0.5s;transform:translateY(0)}
-.box:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+/* Kutular */
+.boxes{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;margin-top:25px;}
+.box{background:#fff;padding:30px;width:300px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,.1);transition:.4s;}
+.box:hover{transform:translateY(-8px);box-shadow:0 12px 25px rgba(0,0,0,.2);}
 
-/* Adım Kutuları */
-.step{background:#fff;margin:20px 0;padding:30px;border-left:6px solid #f1c40f;box-shadow:0 4px 15px rgba(0,0,0,.1);border-radius:10px;transition:0.3s}
-.step:hover{transform:translateX(5px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+/* Süreç adımları */
+.step{background:#fff;margin:20px 0;padding:25px;border-left:6px solid #f0b429;border-radius:10px;box-shadow:0 6px 15px rgba(0,0,0,.1);transition:.3s}
+.step:hover{transform:translateX(5px);box-shadow:0 10px 20px rgba(0,0,0,.2);}
 
 /* Highlight Bölümü */
-.highlight{background:linear-gradient(120deg,#f1c40f,#f39c12);color:#1f2a36;text-align:center;padding:80px 25px;border-radius:12px;animation:fadeIn 1.5s ease-in-out}
+.highlight{background:linear-gradient(120deg,#1a1a2e,#16213e);color:#f0b429;text-align:center;padding:80px 25px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,.2)}
 
 /* Müşteri Yorumları */
-.client-review{background:#fff;padding:25px;margin:20px 0;border-left:6px solid #1f2a36;box-shadow:0 4px 20px rgba(0,0,0,.1);border-radius:10px;transition:0.3s}
-.client-review:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.client-review{background:#fff;padding:25px;margin:20px 0;border-left:6px solid #1a1a2e;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,.1);transition:.3s;}
+.client-review:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.2);}
 
-/* Footer */
-footer{background:#111;color:#fff;text-align:center;padding:40px;position:relative;z-index:1}
-.small{color:#aaa;font-size:14px}
-
-/* Arka plan renkleri */
-section.alt-bg{background:linear-gradient(120deg,#e8f0f7,#d0e2f0);border-radius:12px;}
-
-/* Özel ve Eğlenceli Bölümler */
-.special-section{background:linear-gradient(135deg,#f9f5e3,#f1c40f);padding:60px 25px;border-radius:15px;color:#1f2a36;box-shadow:0 8px 25px rgba(0,0,0,.2)}
-.special-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.1);margin:15px;flex:1;transition:0.3s;text-align:center}
-.special-box:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+/* Özel Bölümler */
+.special-section{background:linear-gradient(135deg,#f0b429,#f39c12);padding:60px 25px;border-radius:15px;color:#1a1a2e;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.special-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,.1);margin:15px;flex:1;text-align:center;transition:.3s}
+.special-box:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.2)}
 .special-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
 
-/* Animasyonlar */
-@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
-@keyframes fadeUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+/* Footer */
+footer{background:#1a1a2e;color:#fff;text-align:center;padding:40px;position:relative;z-index:1;font-size:14px}
 
 /* Harita */
 iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+
+/* Animasyonlar */
+@keyframes fadeUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
 
-<!-- MENU -->
+<!-- Menü -->
 <nav>
   <a href="#">Anasayfa</a>
   <a href="#hakkimizda">Hakkımızda</a>
@@ -75,28 +71,26 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
   <a href="#iletisim">İletişim</a>
 </nav>
 
-<!-- HERO -->
+<!-- Hero -->
 <header>
-  <div class="hero">
-    <h1>🏢 Merkez Gayrimenkul</h1>
-    <p>Avcılar’da Güven ve Tecrübenin Adresi</p>
-    <a class="whatsapp" href="https://wa.me/905555492301" target="_blank">💬 WhatsApp’tan Hemen Yazın</a>
-  </div>
+  <h1>🏢 Merkez Gayrimenkul</h1>
+  <p>Avcılar’da Güven ve Tecrübenin Adresi</p>
+  <a href="https://wa.me/905555492301" target="_blank">💬 WhatsApp’tan Hemen Yazın</a>
 </header>
 
 <!-- WhatsApp Sabit -->
 <a href="https://wa.me/905555492301" class="whatsapp-fixed" target="_blank">💬 WhatsApp</a>
 
-<!-- HAKKIMIZDA -->
-<section id="hakkimizda" class="alt-bg">
+<!-- Hakkımızda -->
+<section id="hakkimizda" style="padding:70px 20px; max-width:1100px;margin:auto;">
 <h2>Hakkımızda</h2>
 <p>Merkez Gayrimenkul, İstanbul Avcılar merkezli olarak faaliyet gösteren, deneyimli ve kurumsal bir gayrimenkul danışmanlık ofisidir. Kurulduğumuz günden bu yana temel prensibimiz; güvenilir hizmet anlayışı ile müşteri memnuniyetini en üst seviyede tutmaktır.</p>
 <p>Gayrimenkul sektöründe doğru bilgi ve doğru yönlendirme çok önemlidir. Müşterilerimizin ihtiyaçlarını detaylı şekilde analiz ederek, kendileri için en uygun çözümleri sunuyoruz.</p>
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=80" alt="Ofis Görseli" style="width:100%;border-radius:15px;margin-top:25px">
 </section>
 
-<!-- SÜREÇ -->
-<section id="surec">
+<!-- Çalışma Süreci -->
+<section id="surec" style="padding:70px 20px; max-width:1100px;margin:auto;">
 <h2>Çalışma Sürecimiz</h2>
 <div class="step"><strong>1. İhtiyaç Analizi</strong><br>Müşterilerimizin beklenti ve hedeflerini detaylı olarak dinliyoruz.</div>
 <div class="step"><strong>2. Piyasa ve Bölge Analizi</strong><br>Avcılar ve çevresindeki güncel piyasa verileri doğrultusunda gayrimenkulün gerçek değerini belirliyoruz.</div>
@@ -105,8 +99,8 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <div class="step"><strong>5. Satış Sonrası Destek</strong><br>Müşterilerimizin yanında olmaya devam ediyoruz.</div>
 </section>
 
-<!-- HİZMETLER -->
-<section id="hizmetler" class="alt-bg">
+<!-- Hizmetler -->
+<section id="hizmetler">
 <h2>Hizmetlerimiz</h2>
 <div class="boxes">
 <div class="box"><h3>Satış Danışmanlığı</h3><p>Gayrimenkullerinizi piyasa koşullarına uygun şekilde en doğru değerle satışa sunuyoruz.</p></div>
@@ -115,7 +109,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 </div>
 </section>
 
-<!-- NEDEN BİZ -->
+<!-- Neden Biz -->
 <div class="highlight" id="nedenbiz">
 <h2>Neden Merkez Gayrimenkul?</h2>
 <p>✔ Avcılar ve çevresinde tam hakimiyet<br>
@@ -125,8 +119,8 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 ✔ Profesyonel ve deneyimli ekip</p>
 </div>
 
-<!-- MÜŞTERİ YORUMLARI -->
-<section id="yorumlar" class="alt-bg">
+<!-- Müşteri Yorumları -->
+<section id="yorumlar" style="padding:70px 20px; max-width:1100px;margin:auto;">
 <h2>Müşteri Yorumları</h2>
 <div class="client-review"><strong>Ayşe K.</strong><br>"Merkez Gayrimenkul ile çalışmak çok kolaydı. Satış süreci hızlı ve sorunsuz geçti."</div>
 <div class="client-review"><strong>Mehmet T.</strong><br>"Kiralama sürecinde bize çok yardımcı oldular, teşekkür ederiz."</div>
@@ -134,7 +128,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <div class="client-review"><strong>Ahmet Y.</strong><br>"Satış sonrası destekleri ile kendimizi çok güvende hissettik."</div>
 </section>
 
-<!-- ÖZEL VE EĞLENCELİ BÖLÜM -->
+<!-- Özel Bölümler -->
 <section id="ozel" class="special-section">
 <h2>Özel ve Eğlenceli Bölümler</h2>
 <div class="special-container">
@@ -153,8 +147,8 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 </div>
 </section>
 
-<!-- İLETİŞİM -->
-<section id="iletisim" class="alt-bg">
+<!-- İletişim -->
+<section id="iletisim" style="padding:70px 20px; max-width:1100px;margin:auto;">
 <h2>İletişim & Konum</h2>
 <p><strong>Adres:</strong> Namık Kemal Caddesi No:13, Avcılar / İstanbul</p>
 <p><strong>Telefon:</strong> 0555 549 23 01</p>
@@ -163,13 +157,14 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <iframe src="https://www.google.com/maps?q=Namık+Kemal+Caddesi+No+13+Avcılar&output=embed"></iframe>
 </section>
 
+<!-- Footer -->
 <footer>
-© 2026 Merkez Gayrimenkul<br>
-<span class="small">Kurumsal gayrimenkul danışmanlığı | Tüm hakları saklıdır</span>
+© 2026 Merkez Gayrimenkul | Kurumsal Gayrimenkul Danışmanlığı
 </footer>
 
 </body>
 </html>
+
 
 
 
