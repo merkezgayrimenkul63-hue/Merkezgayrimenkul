@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <title>Merkez Gayrimenkul | Avcılar</title>
 <style>
-/* Genel Stil */
-body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#f2f2f2;color:#333;line-height:1.6;scroll-behavior:smooth}
-a{text-decoration:none;transition:0.3s}
+body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;scroll-behavior:smooth}
 h2{margin-bottom:30px;text-align:center;color:#1f2a36}
-section{max-width:1100px;margin:auto;padding:70px 20px;position:relative}
+section{max-width:1100px;margin:auto;padding:70px 20px;position:relative;border-radius:12px}
 
 /* Menü */
 nav{background:#1f2a36;padding:15px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.3)}
@@ -16,9 +14,7 @@ nav a{color:#fff;margin:0 15px;font-weight:bold}
 nav a:hover{color:#f1c40f}
 
 /* Hero */
-header{background:url("https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;height:550px;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
-header::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55)}
-header .hero{position:relative;z-index:1;background:rgba(0,0,0,0.5);padding:50px;border-radius:15px;animation:fadeIn 1.5s ease-in-out}
+header{background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;height:550px;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;border-radius:0}
 header h1{font-size:3em;margin-bottom:15px;animation:fadeUp 1s ease-in-out}
 header p{font-size:1.3em;margin-bottom:20px;animation:fadeUp 1.3s ease-in-out}
 
@@ -47,7 +43,13 @@ footer{background:#111;color:#fff;text-align:center;padding:40px;position:relati
 .small{color:#aaa;font-size:14px}
 
 /* Arka plan renkleri */
-section.alt-bg{background:#e8f0f7;border-radius:12px}
+section.alt-bg{background:linear-gradient(120deg,#e8f0f7,#d0e2f0);border-radius:12px;}
+
+/* Özel ve Eğlenceli Bölümler */
+.special-section{background:linear-gradient(135deg,#f9f5e3,#f1c40f);padding:60px 25px;border-radius:15px;color:#1f2a36;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.special-box{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.1);margin:15px;flex:1;transition:0.3s;text-align:center}
+.special-box:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.special-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
 
 /* Animasyonlar */
 @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
@@ -68,6 +70,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
   <a href="#nedenbiz">Neden Biz?</a>
   <a href="#sss">SSS</a>
   <a href="#yorumlar">Müşteri Yorumları</a>
+  <a href="#ozel">Özel Bölümler</a>
   <a href="#iletisim">İletişim</a>
 </nav>
 
@@ -76,9 +79,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
   <div class="hero">
     <h1>🏢 Merkez Gayrimenkul</h1>
     <p>Avcılar’da Güven ve Tecrübenin Adresi</p>
-    <a class="whatsapp" href="https://wa.me/905555492301" target="_blank">
-      💬 WhatsApp’tan Hemen Yazın
-    </a>
+    <a class="whatsapp" href="https://wa.me/905555492301" target="_blank">💬 WhatsApp’tan Hemen Yazın</a>
   </div>
 </header>
 
@@ -89,7 +90,6 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <section id="hakkimizda" class="alt-bg">
 <h2>Hakkımızda</h2>
 <p>Merkez Gayrimenkul, İstanbul Avcılar merkezli olarak faaliyet gösteren, bölgesine hakim, deneyimli ve kurumsal bir gayrimenkul danışmanlık ofisidir. Kurulduğumuz günden bu yana temel prensibimiz; güvenilir hizmet anlayışı ile müşteri memnuniyetini en üst seviyede tutmaktır.</p>
-<p>Gayrimenkul sektöründe doğru bilgi ve doğru yönlendirme büyük önem taşır. Bu bilinçle, müşterilerimizin ihtiyaçlarını detaylı şekilde analiz ederek, kendileri için en uygun çözümleri sunmaktayız.</p>
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=80" alt="Ofis Görseli" style="width:100%;border-radius:15px;margin-top:25px">
 </section>
 
@@ -99,8 +99,6 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <div class="step"><strong>1. İhtiyaç Analizi</strong><br>Müşterilerimizin beklenti ve hedeflerini detaylı olarak dinliyor, en doğru yol haritasını belirliyoruz.</div>
 <div class="step"><strong>2. Piyasa ve Bölge Analizi</strong><br>Avcılar ve çevresindeki güncel piyasa verileri doğrultusunda gayrimenkulün gerçek değerini belirliyoruz.</div>
 <div class="step"><strong>3. Profesyonel Yönlendirme</strong><br>Doğru fiyatlandırma, doğru alıcı veya kiracı eşleşmesi sağlıyoruz.</div>
-<div class="step"><strong>4. Güvenli İşlem Süreci</strong><br>Sözleşme ve resmi işlemleri titizlikle takip ediyoruz.</div>
-<div class="step"><strong>5. Satış Sonrası Destek</strong><br>İşlem tamamlandıktan sonra da müşterilerimizin yanında olmaya devam ediyoruz.</div>
 </section>
 
 <!-- HİZMETLER -->
@@ -109,41 +107,26 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <div class="boxes">
 <div class="box"><h3>Satış Danışmanlığı</h3><p>Gayrimenkullerinizi piyasa koşullarına uygun şekilde en doğru değerle satışa sunuyoruz.</p></div>
 <div class="box"><h3>Kiralama Hizmetleri</h3><p>Kiracı seçimi, sözleşme süreci ve teslim aşamalarında güvenli çözümler sunuyoruz.</p></div>
-<div class="box"><h3>Değerleme & Danışmanlık</h3><p>Gayrimenkul yatırımlarınız için profesyonel analiz ve danışmanlık hizmeti sağlıyoruz.</p></div>
-<div class="box"><h3>Yatırım Danışmanlığı</h3><p>Müşterilerimize kısa ve uzun vadeli gayrimenkul yatırım stratejileri sunuyoruz.</p></div>
 </div>
 </section>
 
-<!-- NEDEN BİZ -->
-<div class="highlight" id="nedenbiz">
-<h2>Neden Merkez Gayrimenkul?</h2>
-<p>
-✔ Avcılar bölgesine tam hakimiyet<br>
-✔ Yıllara dayanan tecrübe<br>
-✔ %100 müşteri memnuniyeti odaklı hizmet<br>
-✔ Dürüst ve şeffaf çalışma prensibi<br>
-✔ Güvenilir danışmanlık anlayışı<br>
-✔ Profesyonel ve deneyimli ekip
-</p>
+<!-- ÖZEL VE EĞLENCELİ BÖLÜM -->
+<section id="ozel" class="special-section">
+<h2>Özel ve Eğlenceli Bölümler</h2>
+<div class="special-container">
+<div class="special-box">
+<h3>Yakın Çevredeki Popüler Bölgeler</h3>
+<p>Avcılar, Beylikdüzü, Küçükçekmece ve çevresindeki popüler semtleri keşfedin.</p>
 </div>
-
-<!-- SSS -->
-<section id="sss">
-<h2>Sık Sorulan Sorular</h2>
-<div class="sss">
-<p><strong>Gayrimenkul satışı ne kadar sürer?</strong><br>Piyasa koşulları ve doğru fiyatlandırmaya bağlı olarak değişebilir.</p>
-<p><strong>Kiralama sürecinde hangi hizmetleri veriyorsunuz?</strong><br>Kiracı seçimi, sözleşme hazırlığı ve teslim süreci dahil kapsamlı destek sunuyoruz.</p>
-<p><strong>Değerleme hizmeti ücretli mi?</strong><br>Hizmet kapsamına göre detaylı bilgi için bizimle iletişime geçebilirsiniz.</p>
-<p><strong>Yatırım danışmanlığı nedir?</strong><br>Gayrimenkul yatırımınızın en doğru şekilde planlanması ve yönetilmesi için profesyonel yönlendirme hizmetidir.</p>
+<div class="special-box">
+<h3>Yatırım Getirisi Hesaplayıcı</h3>
+<p>Gayrimenkulünüzün yatırım potansiyelini hızlıca hesaplayın.</p>
 </div>
-</section>
-
-<!-- MÜŞTERİ YORUMLARI -->
-<section id="yorumlar" class="alt-bg">
-<h2>Müşteri Yorumları</h2>
-<div class="client-review"><strong>Ayşe K.</strong><br>"Merkez Gayrimenkul ile çalışmak çok kolaydı. Satış süreci hızlı ve sorunsuz geçti."</div>
-<div class="client-review"><strong>Mehmet T.</strong><br>"Kiralama sürecinde bize çok yardımcı oldular, teşekkür ederiz."</div>
-<div class="client-review"><strong>Elif D.</strong><br>"Profesyonel ekip, şeffaf bilgi ve güvenilir hizmet."</div>
+<div class="special-box">
+<h3>Sanal Tur</h3>
+<p>Öne çıkan ilanlarda 360° sanal tur ile evleri gezebilirsiniz.</p>
+</div>
+</div>
 </section>
 
 <!-- İLETİŞİM -->
@@ -163,6 +146,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 
 </body>
 </html>
+
 
 
 
