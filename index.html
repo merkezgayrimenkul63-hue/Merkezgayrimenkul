@@ -7,26 +7,15 @@
 body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;scroll-behavior:smooth;background:#f5f6fa;color:#333;}
 h1,h2,h3{margin:0 0 15px 0}
 h2{text-align:center;color:#1a1a2e;font-weight:700;}
-p{line-height:1.7;margin-bottom:15px}
+p{line-height:1.7;margin-bottom:15px;}
 
 /* MENU */
 nav{background:#1a1a2e;padding:18px 20px;position:sticky;top:0;z-index:1000;display:flex;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.2);}
 nav a{color:#fff;margin:0 18px;font-weight:600;text-decoration:none;transition:.3s}
 nav a:hover{color:#f0b429}
 
-/* HERO - Sayfa Girişi Görseli */
-header{
-  background:
-    url("https://i.imgur.com/KKKXxK7.jpg") center/cover no-repeat;
-  height:600px;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
+/* HERO */
+header{background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;height:600px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 header h1{font-size:3em;margin-bottom:15px;}
 header p{font-size:1.3em;margin-bottom:25px;}
 header a{background:#f0b429;color:#1a1a2e;padding:15px 25px;border-radius:50px;text-decoration:none;font-weight:bold;transition:.3s;}
@@ -67,6 +56,9 @@ footer{background:#1a1a2e;color:#fff;text-align:center;padding:40px;position:rel
 
 /* Harita */
 iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+
+/* Animasyonlar */
+@keyframes fadeUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
@@ -99,7 +91,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 <h2>Hakkımızda</h2>
 <p>Merkez Gayrimenkul, İstanbul Avcılar merkezli olarak faaliyet gösteren, deneyimli ve kurumsal bir gayrimenkul danışmanlık ofisidir. Kurulduğumuz günden bu yana temel prensibimiz; güvenilir hizmet anlayışı ile müşteri memnuniyetini en üst seviyede tutmaktır.</p>
 <p>Gayrimenkul sektöründe doğru bilgi ve doğru yönlendirme çok önemlidir. Müşterilerimizin ihtiyaçlarını detaylı şekilde analiz ederek, kendileri için en uygun çözümleri sunuyoruz.</p>
-<img src="https://i.imgur.com/2Y6X8Bf.jpg" alt="Ev Görseli" style="width:100%;border-radius:15px;margin-top:25px">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=80" alt="Ofis Görseli" style="width:100%;border-radius:15px;margin-top:25px">
 </section>
 
 <!-- Çalışma Süreci -->
@@ -188,6 +180,7 @@ iframe{width:100%;height:400px;border:0;border-radius:12px;box-shadow:0 4px 15px
 
 </body>
 </html>
+
 
 
 
