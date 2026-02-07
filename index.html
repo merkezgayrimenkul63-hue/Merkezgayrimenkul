@@ -4,123 +4,94 @@
 <meta charset="UTF-8">
 <title>Merkez Gayrimenkul | Avcılar</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#f5f6fa;
-  color:#333;
-}
-h2{text-align:center;color:#1a1a2e;margin-bottom:25px}
-p{line-height:1.8}
+body{margin:0;font-family:'Poppins',sans-serif;background:#f5f6fa;color:#333}
+h2{text-align:center;color:#1a1a2e;margin-bottom:30px}
+section{padding:80px 20px;max-width:1200px;margin:auto}
+p{line-height:1.9}
 
 /* MENU */
-nav{
-  background:#1a1a2e;
-  padding:18px;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  text-align:center;
-}
-nav a{
-  color:#fff;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:500;
-}
+nav{background:#1a1a2e;padding:18px;text-align:center;position:sticky;top:0}
+nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:500}
 nav a:hover{color:#f0b429}
 
 /* HERO */
 header{
-  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-  url("https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-  height:600px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  color:#fff;
-  text-align:center;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1599423300746-b62533397364") center/cover;
+height:650px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
 }
 header h1{
-  font-family:'Playfair Display',serif;
-  font-size:3.5em;
-  color:#f0b429;
-  letter-spacing:2px;
+font-family:'Playfair Display',serif;
+font-size:3.8em;
+color:#f0b429;
+letter-spacing:3px;
 }
-header p{font-size:1.3em;margin:20px 0}
+header p{font-size:1.4em;max-width:800px}
 header a{
-  background:#f0b429;
-  color:#1a1a2e;
-  padding:15px 30px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* WhatsApp */
-.whatsapp-fixed{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-  background:#25D366;
-  color:#fff;
-  padding:16px 26px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* SECTIONS */
-section{
-  padding:70px 20px;
-  max-width:1100px;
-  margin:auto;
+margin-top:25px;
+background:#f0b429;
+color:#1a1a2e;
+padding:16px 36px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
 }
 
 /* BOX */
-.boxes{
-  display:flex;
-  flex-wrap:wrap;
-  gap:25px;
-  justify-content:center;
-}
+.grid{display:flex;flex-wrap:wrap;gap:25px;justify-content:center}
 .box{
-  background:#fff;
-  width:300px;
-  padding:30px;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-/* REVIEWS */
-.review{
-  background:#fff;
-  padding:25px;
-  margin:20px 0;
-  border-left:6px solid #f0b429;
-  border-radius:10px;
+background:#fff;
+width:320px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1)
 }
 
 /* HIGHLIGHT */
-.highlight{
-  background:#1a1a2e;
-  color:#f0b429;
-  text-align:center;
-  padding:80px 25px;
+.dark{
+background:#1a1a2e;
+color:#f0b429;
+text-align:center;
+padding:90px 25px;
 }
 
-/* FOOTER */
+/* REVIEW */
+.review{
+background:#fff;
+padding:30px;
+margin:20px 0;
+border-left:7px solid #f0b429;
+border-radius:10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+color:#fff;
+padding:16px 28px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
 footer{
-  background:#1a1a2e;
-  color:#fff;
-  text-align:center;
-  padding:40px;
-  font-size:14px;
+background:#1a1a2e;
+color:#fff;
+text-align:center;
+padding:45px;
+font-size:14px;
 }
 </style>
 </head>
@@ -128,21 +99,22 @@ footer{
 <body>
 
 <nav>
-  <a href="#">Anasayfa</a>
-  <a href="#hakkimizda">Hakkımızda</a>
-  <a href="#hizmetler">Hizmetler</a>
-  <a href="#eids">E-Devlet EİDS</a>
-  <a href="#yorumlar">Yorumlar</a>
-  <a href="#iletisim">İletişim</a>
+<a href="#">Anasayfa</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#sektor">Sektörde Yaptıklarımız</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#sss">SSS</a>
+<a href="#yorumlar">Yorumlar</a>
+<a href="#iletisim">İletişim</a>
 </nav>
 
 <header>
-  <h1>MERKEZ GAYRİMENKUL</h1>
-  <p>Avcılar’da Güven, Tecrübe ve Profesyonellik</p>
-  <a href="https://wa.me/905555492301" target="_blank">WhatsApp’tan Yazın</a>
+<h1>MERKEZ GAYRİMENKUL</h1>
+<p>Avcılar ve çevresinde güvenilir, şeffaf ve sonuç odaklı gayrimenkul danışmanlığı</p>
+<a href="https://wa.me/905555492301">WhatsApp’tan Hemen Yazın</a>
 </header>
 
-<a class="whatsapp-fixed" href="https://wa.me/905555492301">💬 WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/905555492301">💬 WhatsApp</a>
 
 <section id="hakkimizda">
 <h2>Hakkımızda</h2>
@@ -152,70 +124,73 @@ satış, kiralama ve yatırım danışmanlığı alanlarında uzmanlaşmış
 kurumsal bir gayrimenkul ofisidir.
 </p>
 <p>
-Sektörde edindiğimiz tecrübe ile alıcı ve satıcı arasında
-<strong>güvenli, şeffaf ve hızlı</strong> bir süreç yönetiyoruz.
-Her portföyü kendi mülkümüz gibi sahipleniyor,
-doğru fiyat, doğru alıcı ve doğru zaman ilkesiyle çalışıyoruz.
+Kurulduğumuz günden bu yana temel ilkemiz;
+<strong>dürüstlük, şeffaflık ve güven</strong> olmuştur.
+Her portföyü kendi mülkümüz gibi sahiplenir,
+sürecin her aşamasında müşterilerimizi detaylı şekilde bilgilendiririz.
 </p>
 <p>
 Bugüne kadar yüzlerce başarılı satış ve kiralama işlemini
-sorunsuz şekilde tamamlamanın gururunu yaşıyoruz.
+sorunsuz şekilde tamamladık.
 </p>
 </section>
 
-<section id="hizmetler">
-<h2>Hizmetlerimiz</h2>
-<div class="boxes">
-<div class="box"><h3>Satış Danışmanlığı</h3><p>Piyasa analizleri ile en doğru satış stratejisini oluşturuyoruz.</p></div>
-<div class="box"><h3>Kiralama Hizmetleri</h3><p>Güvenilir kiracı seçimi ve sözleşme süreçleri.</p></div>
-<div class="box"><h3>Yatırım Danışmanlığı</h3><p>Yüksek getiri potansiyelli yatırımlar.</p></div>
+<section id="sektor">
+<h2>Sektörde Yaptıklarımız</h2>
+<div class="grid">
+<div class="box">
+<h3>🏢 Satış İşlemleri</h3>
+<p>Avcılar, Beylikdüzü ve Küçükçekmece bölgelerinde çok sayıda konut ve ticari gayrimenkul satışını başarıyla tamamladık.</p>
+</div>
+<div class="box">
+<h3>🔑 Kiralama Süreçleri</h3>
+<p>Ev sahibi ve kiracı arasında güvenli, hızlı ve sorunsuz kiralama süreçleri yönettik.</p>
+</div>
+<div class="box">
+<h3>📊 Değerleme & Analiz</h3>
+<p>Bölge bazlı piyasa analizleri ile doğru fiyatlandırma sağladık.</p>
+</div>
 </div>
 </section>
 
-<section id="eids">
-<h2>E-Devlet EİDS Yetkilendirme Süreci</h2>
+<div class="dark">
+<h2>Rakamlarla Merkez Gayrimenkul</h2>
 <p>
-Taşınmaz ilanlarınızın yasal ve güvenli şekilde yayınlanabilmesi için
-E-Devlet EİDS yetkilendirmesi gereklidir.
+✔ 300+ Mutlu müşteri<br>
+✔ 200+ Satış & kiralama işlemi<br>
+✔ 20+ Yıl sektörel tecrübe<br>
+✔ %100 müşteri memnuniyeti odaklı hizmet
 </p>
-<p><strong>Yetkilendirme Adımları:</strong></p>
-<p>
-1️⃣ E-Devlet sistemine giriş yapın.<br>
-2️⃣ Ticaret Bakanlığı – EİDS Taşınmaz İlan Yetkilendirme ekranına gidin.<br>
-3️⃣ Merkez Gayrimenkul’u yetkilendirin.<br>
-4️⃣ Yetkilendirme sonrası ilan süreciniz başlatılır.
-</p>
-<p>
-👉 <a href="https://www.turkiye.gov.tr/ticaret-eids-tasinmaz-ilani-yetkilendirme-islemleri" target="_blank">
-E-Devlet EİDS Yetkilendirme Sayfası
-</a>
-</p>
+</div>
+
+<section id="hizmetler">
+<h2>Hizmetlerimiz</h2>
+<div class="grid">
+<div class="box"><h3>Satış Danışmanlığı</h3><p>Gayrimenkulünüzü doğru fiyatla, doğru alıcıya ulaştırıyoruz.</p></div>
+<div class="box"><h3>Kiralama Hizmeti</h3><p>Güvenilir kiracı, sağlam sözleşme, hızlı sonuç.</p></div>
+<div class="box"><h3>Yatırım Danışmanlığı</h3><p>Uzun vadeli kazanç sağlayacak yatırımlar sunuyoruz.</p></div>
+</div>
+</section>
+
+<section id="sss">
+<h2>Sık Sorulan Sorular</h2>
+<p><strong>Gayrimenkulümü ne kadar sürede satarsınız?</strong><br>Piyasa koşullarına uygun fiyatlandırılan portföyler kısa sürede sonuçlanır.</p>
+<p><strong>E-Devlet EİDS yetkilendirmesi gerekli mi?</strong><br>Evet, ilan yayınlanabilmesi için zorunludur.</p>
+<p><strong>Sözleşme yapıyor musunuz?</strong><br>Tüm işlemler resmi sözleşme ile yapılır.</p>
 </section>
 
 <section id="yorumlar">
 <h2>Müşteri Yorumları</h2>
-
-<div class="review"><strong>Ayşe K.</strong><br>Satış süreci çok hızlı ve güvenliydi.</div>
-<div class="review"><strong>Mehmet T.</strong><br>İşlerini profesyonel yapıyorlar.</div>
-<div class="review"><strong>Elif D.</strong><br>Şeffaf ve dürüst bir ekip.</div>
+<div class="review"><strong>Ayşe K.</strong><br>Gerçekten güvenilir bir ofis.</div>
+<div class="review"><strong>Mehmet T.</strong><br>Süreci baştan sona takip ettiler.</div>
+<div class="review"><strong>Zeynep A.</strong><br>İlanım kısa sürede satıldı.</div>
 <div class="review"><strong>Ahmet Y.</strong><br>Satış sonrası da ilgililer.</div>
-<div class="review"><strong>Zeynep A.</strong><br>Avcılar bölgesini çok iyi biliyorlar.</div>
-
+<div class="review"><strong>Elif D.</strong><br>Avcılar bölgesine hakimler.</div>
 </section>
-
-<div class="highlight">
-<h2>Neden Merkez Gayrimenkul?</h2>
-<p>
-✔ Bölge uzmanlığı<br>
-✔ Kurumsal hizmet<br>
-✔ Güvenilir danışmanlık<br>
-✔ Satış sonrası destek
-</p>
-</div>
 
 <section id="iletisim">
 <h2>İletişim</h2>
-<p><strong>Adres:</strong> Namık Kemal Caddesi No:13 Avcılar / İstanbul</p>
+<p><strong>Adres:</strong> Namık Kemal Cd. No:13 Avcılar / İstanbul</p>
 <p><strong>Telefon:</strong> 0212 509 23 01</p>
 <p><strong>Mobil:</strong> 0555 549 23 01</p>
 <p><strong>E-Posta:</strong> merkezgayrimenkul63@gmail.com</p>
@@ -227,6 +202,7 @@ E-Devlet EİDS Yetkilendirme Sayfası
 
 </body>
 </html>
+
 
 
 
