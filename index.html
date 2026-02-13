@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merkez Gayrimenkul | Profesyonel Emlak Hizmetleri</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Merkez Gayrimenkul | İEDS Yetkili Emlak Ofisi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #1a2a6c; --secondary: #b21f1f; --accent: #fdbb2d; --text: #333; --light: #f4f7f6; }
-        * { box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: #f0f2f5; color: var(--text); scroll-behavior: smooth; }
+        :root { --main: #0a1931; --red: #ba1e1e; --gold: #ffc107; --bg: #f4f7f6; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--bg); color: #333; scroll-behavior: smooth; }
         
         /* Navigasyon */
-        nav { background: var(--primary); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        nav { background: var(--main); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { color: white; font-size: 22px; font-weight: 700; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
+        .logo { color: white; font-size: 24px; font-weight: 700; letter-spacing: 1px; }
+        .nav-links a { color: #ccc; text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.3s; }
+        .nav-links a:hover { color: white; }
 
         /* Hero */
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'); 
-                height: 400px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+        .hero { background: linear-gradient(rgba(10, 25, 49, 0.8), rgba(10, 25, 49, 0.8)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80'); 
+                height: 450px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin: 0; }
+        .hero p { font-size: 1.2rem; color: var(--gold); }
 
-        .main-container { max-width: 1200px; margin: -50px auto 50px; display: grid; grid-template-columns: 1fr 3fr; gap: 30px; padding: 0 20px; }
+        .container { max-width: 1200px; margin: -60px auto 60px; display: grid; grid-template-columns: 300px 1fr; gap: 30px; padding: 0 20px; }
 
         /* Sidebar */
-        .sidebar { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); height: fit-content; }
-        .info-card { background: var(--light); padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--primary); }
+        .sidebar { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: fit-content; }
+        .side-box { background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .side-box i { color: var(--red); margin-right: 8px; }
 
-        /* Content Area */
-        .content-area { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        section { margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid #eee; }
-        .section-title { font-size: 24px; color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        /* Main Content */
+        .main-content { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .section-header { border-left: 5px solid var(--red); padding-left: 15px; margin-bottom: 30px; }
+        .section-header h2 { margin: 0; color: var(--main); }
 
-        /* Blog/Rehber Kartları */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .blog-card { background: var(--light); padding: 20px; border-radius: 10px; font-size: 14px; }
-        .blog-card h4 { margin-top: 0; color: var(--secondary); }
+        /* Stats Paneli */
+        .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+        .stat-item { text-align: center; padding: 20px; background: var(--main); color: white; border-radius: 10px; }
+        .stat-item h3 { font-size: 2rem; margin: 0; color: var(--gold); }
 
-        /* İEDS Kutusu */
-        .ieds-box { background: #fff9e6; border: 2px solid var(--accent); padding: 25px; border-radius: 15px; text-align: center; }
-        .ieds-link { display: inline-block; background: #2c3e50; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+        /* İEDS Adımları */
+        .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .step-card { background: #fff9e6; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba; font-size: 13px; }
+        .step-card span { display: block; font-weight: bold; color: var(--red); margin-bottom: 5px; font-size: 16px; }
 
-        /* Form */
-        input, textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        button { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; width: 100%; }
+        /* Buton */
+        .btn-e-devlet { display: inline-block; background: #1a73e8; color: white; padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 25px; box-shadow: 0 4px 15px rgba(26, 115, 232, 0.4); transition: 0.3s; }
+        .btn-e-devlet:hover { transform: translateY(-3px); background: #1557b0; }
 
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        /* İletişim Formu Alt */
+        .form-group { margin-bottom: 15px; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
+        .submit-btn { background: var(--red); color: white; border: none; padding: 12px; width: 100%; border-radius: 6px; cursor: pointer; font-weight: bold; }
 
-        @media (max-width: 768px) { .main-container { grid-template-columns: 1fr; } .nav-links { display: none; } }
+        .wp-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-decoration: none; z-index: 1001; }
+
+        @media (max-width: 992px) { .container { grid-template-columns: 1fr; } .hero h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
@@ -58,91 +66,120 @@
         <div class="logo">MERKEZ GAYRİMENKUL</div>
         <div class="nav-links">
             <a href="#hakkimizda">Kurumsal</a>
-            <a href="#ieds">İEDS Yetki</a>
-            <a href="#rehber">Emlak Rehberi</a>
+            <a href="#ieds">e-Devlet Yetki</a>
+            <a href="#hizmetler">Hizmetlerimiz</a>
             <a href="#iletisim">İletişim</a>
         </div>
     </div>
 </nav>
 
 <div class="hero">
-    <h1>Merkez'de Güven, Gelecekte Huzur</h1>
+    <div>
+        <h1>Gayrimenkulde Güvenin Merkezi</h1>
+        <p>Namık Kemal Caddesi'nin 20 Yıllık Tecrübeli Ofisi</p>
+    </div>
 </div>
 
-<div class="main-container">
+<div class="container">
     <aside class="sidebar">
-        <h3>İletişim</h3>
-        <div class="info-card"><b>Ofis:</b><br>0212 509 23 01</div>
-        <div class="info-card"><b>GSM:</b><br>0555 549 23 01</div>
-        <div class="info-card"><b>Adres:</b><br>Merkez Mah. Namık Kemal Cad. No:13</div>
+        <div class="side-box">
+            <i class="fas fa-phone-alt"></i> 0212 509 23 01
+        </div>
+        <div class="side-box">
+            <i class="fas fa-mobile-alt"></i> 0555 549 23 01
+        </div>
+        <div class="side-box">
+            <i class="fas fa-map-marker-alt"></i> Merkez Mah. Namık Kemal Cad. No:13
+        </div>
         
-        <h3 style="margin-top:30px;">Hızlı Teklif Al</h3>
-        <form>
-            <input type="text" placeholder="Adınız">
-            <input type="tel" placeholder="Telefonunuz">
-            <textarea placeholder="Mesajınız (Hangi ilanla ilgili?)"></textarea>
-            <button type="button" onclick="alert('Mesajınız alındı, size döneceğiz.')">Gönder</button>
-        </form>
+        <div style="padding: 10px;">
+            <h4>Hızlı Mesaj Gönder</h4>
+            <div class="form-group"><input type="text" placeholder="Adınız"></div>
+            <div class="form-group"><input type="tel" placeholder="Telefonunuz"></div>
+            <div class="form-group"><textarea placeholder="Mesajınız" rows="3"></textarea></div>
+            <button class="submit-btn">GÖNDER</button>
+        </div>
     </aside>
 
-    <main class="content-area">
+    <main class="main-content">
+        
+        <div class="stats-row">
+            <div class="stat-item"><h3>20+</h3><small>Yıllık Deneyim</small></div>
+            <div class="stat-item"><h3>1500+</h3><small>Tapu Devri</small></div>
+            <div class="stat-item"><h3>%100</h3><small>Şeffaf Süreç</small></div>
+        </div>
+
         <section id="hakkimizda">
-            <div class="section-title"><i class="fas fa-history"></i> 20 Yıllık Bölge Tecrübesi</div>
-            <p>Namık Kemal Caddesi'nin en köklü ofislerinden biri olarak, Merkez Mahallesi'ndeki her sokağı, her binayı tanıyoruz. 2004'ten beri dürüst ticaret anlayışımızla yüzlerce aileyi ev sahibi yaptık.</p>
+            <div class="section-header"><h2>Kurumsal Tecrübemiz</h2></div>
+            <p style="line-height: 1.8;">
+                <b>Merkez Gayrimenkul</b>, Namık Kemal Caddesi üzerinde kurulan ve bölgenin gelişimine tanıklık eden köklü bir kuruluştur. 
+                Sadece emlak satışı değil, müşterilerimize yatırım danışmanlığı, ekspertiz hizmetleri ve tapu takibi süreçlerinde profesyonel 
+                destek sağlıyoruz. Amacımız, her müşterimizin dükkanımızdan "mutlu bir ev sahibi" olarak ayrılmasıdır.
+            </p>
         </section>
 
-        <section id="ieds">
-            <div class="section-title"><i class="fas fa-shield-alt"></i> Ticaret Bakanlığı İEDS Yetki Verme</div>
-            <div class="ieds-box">
-                <p>Mülkünüzün resmi ilan sitelerinde yayınlanabilmesi için e-devlet onayı gereklidir.</p>
-                <div style="text-align: left; font-size: 14px; margin: 15px 0;">
-                    1. <b>E-Devlet</b>'e giriş yapın.<br>
-                    2. Arama çubuğuna <b>"Ticari Taşınmaz"</b> yazın.<br>
-                    3. <b>Taşınmaz Ticareti Yetkilendirme İşlemleri</b>'ne tıklayın.<br>
-                    4. "Yeni Yetkilendirme Ekle" diyerek <b>Merkez Gayrimenkul</b>'ü seçin.
-                </div>
-                <a href="https://www.turkiye.gov.tr/ticaret-tasinmaz-ticareti-yetkilendirme-islemleri" target="_blank" class="ieds-link">
-                    <i class="fas fa-external-link-alt"></i> E-Devlet Yetki Sayfasına Git
+        <section id="ieds" style="background: #fdfdfd; padding: 25px; border-radius: 12px; border: 1px solid #eee;">
+            <div class="section-header"><h2>E-Devlet İEDS Yetkilendirme</h2></div>
+            <p>Taşınmaz Ticareti Yönetmeliği gereği, mülkünüzün ilan sitelerinde yayınlanabilmesi için "Elektronik İlan Doğrulama Sistemi" (EİDS) üzerinden emlak ofisimize yetki vermeniz gerekmektedir.</p>
+            
+            <div class="step-grid">
+                <div class="step-card"><span>1. Giriş</span>e-Devlet şifrenizle sisteme giriş yapın.</div>
+                <div class="step-card"><span>2. Seçim</span>İşletme seçim kısmından "Merkez Gayrimenkul"ü bulun.</div>
+                <div class="step-card"><span>3. Süre</span>Yetki süresini ve taşınmazınızı belirleyin.</div>
+                <div class="step-card"><span>4. Onay</span>İşlemi onaylayarak ilan sürecini başlatın.</div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://www.turkiye.gov.tr/ticaret-eids-tasinmaz-ilani-yetkilendirme-islemleri" target="_blank" class="btn-e-devlet">
+                    <i class="fas fa-external-link-alt"></i> EİDS Yetki Verme Sayfasına Git
                 </a>
             </div>
         </section>
 
-        <section id="rehber">
-            <div class="section-title"><i class="fas fa-book-open"></i> Emlak Rehberi & Danışmanlık</div>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <h4>Tapu Süreci</h4>
-                    <p>Satış günü işlemlerin hızlanması için gereken evrak listesini ofisimizden alabilirsiniz.</p>
+        <section id="hizmetler" style="margin-top: 50px;">
+            <div class="section-header"><h2>Neden Bizimle Çalışmalısınız?</h2></div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-chart-pie" style="color: var(--red);"></i> <b>Pazar Analizi:</b> Mülkünüzün doğru değerini belirlemek için ücretsiz ekspertiz yapıyoruz.
                 </div>
-                <div class="blog-card">
-                    <h4>Ekspertiz Nedir?</h4>
-                    <p>Evinizin gerçek piyasa değerini ücretsiz olarak analiz ediyoruz.</p>
+                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-bullhorn" style="color: var(--red);"></i> <b>Geniş Pazarlama:</b> Tüm ilan platformlarında en üst sıralarda yer almanızı sağlıyoruz.
                 </div>
-                <div class="blog-card">
-                    <h4>Kredi Rehberi</h4>
-                    <p>Düşük faizli konut kredisi uygunluk şartlarını beraber inceleyelim.</p>
+                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-balance-scale" style="color: var(--red);"></i> <b>Hukuki Destek:</b> Satış ve kira sözleşmelerini hukukçularımız denetiminde hazırlıyoruz.
+                </div>
+                <div style="padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <i class="fas fa-users" style="color: var(--red);"></i> <b>Hazır Portföy:</b> Dükkanımızda kayıtlı bekleyen binlerce potansiyel alıcıya doğrudan ulaşıyoruz.
                 </div>
             </div>
         </section>
 
         <section id="iletisim">
-            <div class="section-title"><i class="fas fa-map-marker-alt"></i> Konumumuz</div>
-            <div style="width: 100%; height: 300px; border-radius: 10px; overflow: hidden;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650424564537!2d28.718!3d40.985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzA2LjAiTiAyOMKwNDMnMDQuOCJF!5e0!3m2!1str!2str!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="section-header"><h2>Ofisimize Bekleriz</h2></div>
+            <div style="width: 100%; height: 350px; border-radius: 12px; overflow: hidden; border: 1px solid #ddd;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.650227181165!2d28.7118331!3d40.989111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzIwLjgiTiAyOMKwNDInNDIuNiJF!5e0!3m2!1str!2str!4v1620000000000" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
+
     </main>
 </div>
 
-<a href="https://wa.me/905555492301" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<footer style="background: var(--main); color: #888; padding: 40px 20px; text-align: center;">
+    <div style="max-width: 1200px; margin: auto;">
+        <h3 style="color: white;">MERKEZ GAYRİMENKUL</h3>
+        <p>Namık Kemal Caddesi No:13, Merkez Mahallesi</p>
+        <div style="margin: 20px 0;">
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-youtube"></i></a>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #222;">
+        <p style="font-size: 12px;">© 2026 Merkez Gayrimenkul. Taşınmaz Ticareti Yetki Belgesi: [Belge No Giriniz]</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/905555492301" class="wp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
